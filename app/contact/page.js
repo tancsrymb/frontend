@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-    <h1><center>Mr.Jittiphat Junthakee</center></h1>
+    <h1><center>IG:lewandowsga</center></h1>
     </>
   );
 }
