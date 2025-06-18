@@ -1,9 +1,9 @@
 export default function Home() {
   return (
     <>
-    <h1>
+    <h1><CENTER>
     Mr.Jittiphat Junthakee
-    </h1>
+    </CENTER></h1>
     </>
   );
 }
