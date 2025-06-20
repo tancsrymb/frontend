@@ -5,6 +5,10 @@ const prompt = Prompt({
   weight: ['400', '700'],
 });
 
+export const metadata = {
+  title: "About",
+};
+
 export default function Home() {
   return (
     <main className={`${prompt.className} min-h-screen flex items-center justify-center bg-white px-4`}>
