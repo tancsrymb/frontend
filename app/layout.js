@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased ${geist.className} ${geistMono.className}`}>
         <Navigation />
-        <main>{children}fff</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
