@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Geist, Geist_Mono } from 'next/font/google';
 
 import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 
 const geist = Geist({
   subsets: ['latin'],
