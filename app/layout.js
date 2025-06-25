@@ -3,19 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Geist, Geist_Mono } from 'next/font/google';
 
 import Navigation from './components/Navigation';
-import Footer from './components/footer';
 
-const geist = Geist({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-});
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-});
 
 export const metadata = {
   title: 'JJ',
@@ -25,10 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased ${geist.className} ${geistMono.className}`}>
+      <body>
         <Navigation />
         <main>{children}</main>
-        <Footer />
+
       </body>
     </html>
   );
