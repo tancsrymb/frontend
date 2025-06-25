@@ -1,69 +1,62 @@
-'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 
-export default function Navigation() {
-  const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const links = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Products', href: '/products' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
+export default function Navbar() {
   return (
-    <nav className="border-b p-4">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-
-        {/* Hamburger */}
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <Link className="navbar-brand" href="/">Navbar</Link>
         <button
-          className="md:hidden focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            viewBox="0 0 24 24"
-          >
-            {menuOpen ? (
-              <path d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path d="M3 12h18M3 6h18M3 18h18" />
-            )}
-          </svg>
+          <span className="navbar-toggler-icon" />
         </button>
-
-        {/* Menu */}
-        <ul
-          className={`${
-            menuOpen ? 'flex' : 'hidden'
-          } flex-col absolute top-[64px] left-0 w-full border-t bg-white md:static md:flex md:flex-row md:items-center md:space-x-8 md:border-none md:bg-transparent`}
-        >
-          {links.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <li key={link.href} className="px-4 py-2 md:p-0">
-                <Link
-                  href={link.href}
-                  className={`block md:inline-block px-2 py-1 ${
-                    isActive ? 'font-bold underline' : ''
-                  }`}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link active" href="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/about">About</Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Product
+              </a>
+              <ul className="dropdown-menu">
+                <li><Link className="dropdown-item" href="/products">Product List</Link></li>
+                <li><a className="dropdown-item" href="#">Another action</a></li>
+                <li><hr className="dropdown-divider" /></li>
+                <li><a className="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/contact">Contact</Link>
+            </li>
+          </ul>
+          <form className="d-flex" role="search">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
       </div>
     </nav>
   );
