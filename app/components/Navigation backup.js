@@ -2,6 +2,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { Prompt } from 'next/font/google';
+
+const prompt = Prompt({
+  subsets: ['thai', 'latin'],
+  weight: ['400', '700'],
+});
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -15,12 +21,12 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="border-b p-4">
+    <nav className={`${prompt.className} bg-[#fdf6ec] border-b border-[#e8e1d4] p-4 shadow-sm`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
 
         {/* Hamburger */}
         <button
-          className="md:hidden focus:outline-none"
+          className="md:hidden text-[#3b3b3b] focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -45,7 +51,8 @@ export default function Navigation() {
         <ul
           className={`${
             menuOpen ? 'flex' : 'hidden'
-          } flex-col absolute top-[64px] left-0 w-full border-t bg-white md:static md:flex md:flex-row md:items-center md:space-x-8 md:border-none md:bg-transparent`}
+          } flex-col absolute top-[64px] left-0 w-full bg-[#fdf6ec] border-t border-[#e8e1d4]
+           md:static md:flex md:flex-row md:space-x-12 md:bg-transparent md:border-none`}
         >
           {links.map((link) => {
             const isActive = pathname === link.href;
@@ -53,12 +60,17 @@ export default function Navigation() {
               <li key={link.href} className="px-4 py-2 md:p-0">
                 <Link
                   href={link.href}
-                  className={`block md:inline-block px-2 py-1 ${
-                    isActive ? 'font-bold underline' : ''
-                  }`}
+                  className={`relative block md:inline-block px-2 py-1 transition
+                    ${isActive ? 'text-[#a1866f]' : 'text-[#4b4b4b]'}
+                    hover:text-[#a1866f]`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
+                  <span
+                    className={`absolute left-0 -bottom-1 h-[2px] w-full bg-[#a1866f] transition-transform
+                      ${isActive ? 'scale-x-100' : 'scale-x-0'}
+                      group-hover:scale-x-100 origin-left`}
+                  ></span>
                 </Link>
               </li>
             );
