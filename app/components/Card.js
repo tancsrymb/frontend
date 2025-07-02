@@ -2,35 +2,30 @@ import Image from 'next/image';
 
 export default function Card() {
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid' >
       <div className='row justify-content-center'>
 
         {/* First Card */}
-        <div className='col-md-4 text-center mb-4'>
-          <div className="card mx-auto" style={{ width: '18rem' }}>
-            <Image src="/images/Card/F11.png" alt="..." width={288} height={180} className="d-block w-100" />
+        <div className='col-md-6 text-center mb-4'>
+          <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #000000', overflow: 'hidden', backgroundColor: '#000000' }}>
+            <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+              <Image src="/images/Card/Hamilton.png" alt="Lewis Hamilton" fill style={{ objectFit: 'cover' }} />
+            </div>
             <div className="card-body">
-              <p className="card-text">Ferrari Black</p>
+              <p className="card-text" style={{ fontWeight: 'bold', color: 'white' }}>Lewis Hamilton</p>
             </div>
           </div>
         </div>
+
 
         {/* Second Card */}
-        <div className='col-md-4 text-center mb-4'>
-          <div className="card mx-auto" style={{ width: '18rem' }}>
-            <Image src="/images/Card/F12.png" alt="..." width={288} height={180} className="d-block w-100" />
-            <div className="card-body">
-              <p className="card-text">Ferrari Red</p>
+        <div className='col-md-6 text-center mb-4'>
+          <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #000000', overflow: 'hidden', backgroundColor: '#000000' }}>
+            <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+              <Image src="/images/Card/Leclerc.png" alt="Leclerc" fill style={{ objectFit: 'cover' }} />
             </div>
-          </div>
-        </div>
-
-        {/* Third Card */}
-        <div className='col-md-4 text-center mb-4'>
-          <div className="card mx-auto" style={{ width: '18rem' }}>
-            <Image src="/images/Card/F13.png" alt="..." width={288} height={180} className="d-block w-100" />
             <div className="card-body">
-              <p className="card-text">Ferrari Third</p>
+              <p className="card-text" style={{ fontWeight: 'bold', color: 'white' }}>Charles Leclerc</p>
             </div>
           </div>
         </div>

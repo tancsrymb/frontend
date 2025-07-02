@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { Geist, Geist_Mono } from 'next/font/google';
+
 
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
 
 export const metadata = {
   title: 'JJ',
@@ -14,11 +13,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <div className='container-fluid'>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
+      <body style={{  }}>
+
+        <div className="container-fluid">
+          
+          <div className="container-fluid">
+            <Navigation />
+          </div>
+          
+          <main className="flex-grow-1 container-fluid py-4">
+            {children}
+          </main>
+
+          <div className="container-fluid">
+            <Footer />
+          </div>
+
         </div>
       </body>
     </html>
