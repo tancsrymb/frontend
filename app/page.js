@@ -1,9 +1,6 @@
 import { Prompt } from 'next/font/google';
-import Navigation from "./components/carousel";
 import Carousel from './components/carousel';
 import Card from './components/Card';
-
-
 
 const prompt = Prompt({
   subsets: ['thai', 'latin'],
@@ -11,23 +8,21 @@ const prompt = Prompt({
 });
 
 export const metadata = {
-  title: "JJTMT",
+  title: "FERRARI",
 };
 
 export default function Home() {
   return (
-    <main className={`${prompt.className} min-h-screen flex items-center justify-center bg-white px-4`}>
-      <Carousel></Carousel>
-      <h1 className="text-4xl text-[#a1866f] tracking-wide text-center">
-        Ferrari Jacket
-      </h1>
-      <Card />
+    <main className={`${prompt.className} min-h-screen flex flex-col items-center justify-start bg-white px-4 pt-12`}>
+      <Carousel />
 
-      <h1 className="text-4xl text-[#a1866f] tracking-wide text-center">
+      <div className="w-full container mx-auto py-8" style={{ marginTop: '50px' }}>
+        <Card />
+      </div>
+
+      <h1 className="text-4xl text-[#a1866f] tracking-wide text-center mt-8">
         Mr.Jittiphat Junthakee
       </h1>
-
     </main>
-    
   );
 }
