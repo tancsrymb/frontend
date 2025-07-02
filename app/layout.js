@@ -16,9 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className='container-fluid'>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

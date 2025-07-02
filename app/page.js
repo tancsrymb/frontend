@@ -1,6 +1,7 @@
 import { Prompt } from 'next/font/google';
 import Navigation from "./components/carousel";
 import Carousel from './components/carousel';
+import Card from './components/Card';
 
 
 
@@ -18,8 +19,15 @@ export default function Home() {
     <main className={`${prompt.className} min-h-screen flex items-center justify-center bg-white px-4`}>
       <Carousel></Carousel>
       <h1 className="text-4xl text-[#a1866f] tracking-wide text-center">
+        Ferrari Jacket
+      </h1>
+      <Card />
+
+      <h1 className="text-4xl text-[#a1866f] tracking-wide text-center">
         Mr.Jittiphat Junthakee
       </h1>
+
     </main>
+    
   );
 }
