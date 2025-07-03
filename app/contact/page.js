@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className={`${prompt.className} min-h-screen flex items-center justify-center bg-white px-4`}>
+    <main className={`${prompt.className} min-h-screen flex items-center justify-center bg-#000000 px-4 text-white`}>
       <h1 className="text-4xl text-[#a1866f] tracking-wide text-center">
         IG : lewandowsga
       </h1>

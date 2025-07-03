@@ -1,53 +1,62 @@
 export default function Footer() {
   return (
-    <footer className="py-4 mt-5 border-top bg-light w-100">
-      <div className="container-fluid d-flex flex-wrap justify-content-between align-items-center">
-        
-        <div className="d-flex align-items-center">
-          <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" aria-label="Bootstrap">
-            <svg className="bi" width={30} height={24} aria-hidden="true">
+    <div className="container">
+      <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top text-white">
+        {/* โลโก้และลิขสิทธิ์ */}
+        <div className="col mb-3">
+          <a href="/" className="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">
+            <svg className="bi me-2" width={40} height={32} aria-hidden="true">
               <use xlinkHref="#bootstrap" />
             </svg>
           </a>
-          <span className="mb-3 mb-md-0 text-muted">© 2025 JJ Company</span>
+          <p className="text-white">© 2025</p>
         </div>
-
-        <ul className="nav justify-content-end list-unstyled d-flex">
-          <li className="ms-3">
-            <a
-              className="text-muted"
-              href="https://www.instagram.com/f1/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <i className="bi bi-instagram fs-4"></i>
-            </a>
-          </li>
-          <li className="ms-3">
-            <a
-              className="text-muted"
-              href="https://www.facebook.com/Formula1/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i className="bi bi-facebook fs-4"></i>
-            </a>
-          </li>
-          <li className="ms-3">
-            <a
-              className="text-muted"
-              href="https://twitter.com/F1"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <i className="bi bi-twitter fs-4"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+        {/* ช่องว่าง */}
+        <div className="col mb-3" />
+        
+        {/* เมนู Section 2 */}
+        <div className="col mb-3">
+          <h5>Section</h5>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">Home</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">Features</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">Pricing</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">FAQs</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">About</a>
+            </li>
+          </ul>
+        </div>
+        {/* เมนู Section 3 */}
+        <div className="col mb-3">
+          <h5>Section</h5>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">Home</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">Features</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">Pricing</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">FAQs</a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-white">About</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
   );
 }

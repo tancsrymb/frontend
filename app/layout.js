@@ -13,15 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{  }}>
+      <body style={{ backgroundColor: '#000000' }}> 
 
-        <div className="container-fluid">
+        <div className="container-fluid" >
           
           <div className="container-fluid">
             <Navigation />
           </div>
           
-          <main className="flex-grow-1 container-fluid py-4">
+          <main className="flex-grow-1 container-fluid py-4" >
             {children}
           </main>
 

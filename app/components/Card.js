@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function Card() {
   return (
-    <div className='container-fluid' >
-      <div className='row justify-content-center'>
+    <div className='container-fluid' style={{ backgroundColor: '#000000' }} >
+      <div className='row justify-content-center' style={{ backgroundColor: '#000000' }}>
 
         {/* First Card */}
         <div className='col-md-6 text-center mb-4'>

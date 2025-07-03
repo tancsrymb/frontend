@@ -38,16 +38,16 @@ export default function Navbar() {
               <Link className="nav-link" href="/about" style={{ color: '#fff' }}>About</Link>
             </li>
 
+            
+
+            <li className="nav-item">
+              <Link className="nav-link" href="https://www.formula1.com/en/page/gaming" style={{ color: '#fff' }}>Games</Link>
+            </li>
+
+            
             {/* Teams Dropdown */}
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ color: '#fff' }}
-              >
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ color: '#fff' }}  >
                 Teams
               </a>
               <ul className="dropdown-menu" style={{ backgroundColor: '#000', border: '1px solid #d40000', borderRadius: '10px' }}>
@@ -102,13 +102,17 @@ export default function Navbar() {
                 </li>
 
               </ul>
+            </li>
 
-              
+
+            <li className="nav-item">
+              <Link className="nav-link" href="/player" style={{ color: '#fff' }}>Driver</Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" href="/contact" style={{ color: '#fff' }}>Contact</Link>
             </li>
+
             {/* Search Bar */}
               <form className="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
                 <input
