@@ -13,7 +13,7 @@ export default function Carousel() {
       id="carouselExample" 
       className="carousel slide"
       style={{
-        border: '5px solid #500409',
+        border: '5px solid #d40000',
         borderRadius: '10px',
         overflow: 'hidden'
       }}

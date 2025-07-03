@@ -7,7 +7,7 @@ export default function Card() {
 
         {/* First Card */}
         <div className='col-md-6 text-center mb-4'>
-          <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #000000', overflow: 'hidden', backgroundColor: '#000000' }}>
+          <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
               <Image src="/images/Card/Hamilton.png" alt="Lewis Hamilton" fill style={{ objectFit: 'cover' }} />
             </div>
@@ -20,7 +20,7 @@ export default function Card() {
 
         {/* Second Card */}
         <div className='col-md-6 text-center mb-4'>
-          <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #000000', overflow: 'hidden', backgroundColor: '#000000' }}>
+          <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
               <Image src="/images/Card/Leclerc.png" alt="Leclerc" fill style={{ objectFit: 'cover' }} />
             </div>
