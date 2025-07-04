@@ -7,7 +7,7 @@ const prompt = Prompt({
 });
 
 export const metadata = {
-  title: "Product",
+  title: "Driver",
 };
 
 export default function Home() {
