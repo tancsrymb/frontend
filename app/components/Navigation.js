@@ -53,52 +53,52 @@ export default function Navbar() {
               <ul className="dropdown-menu" style={{ backgroundColor: '#000', border: '1px solid #d40000', borderRadius: '10px' }}>
                 
                 <li>
-                  <Link className="dropdown-item hover:bg-red-700 text-white transition" href="/">McLaren</Link>
+                  <Link className="dropdown-item hover:bg-red-700 text-white transition" href="/team/mclaren">McLaren</Link>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
                 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Ferrari</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/ferrari">Ferrari</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Mercedes</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/mercedes">Mercedes</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Red Bull Racing</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/redbullracing">Red Bull Racing</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Williams</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/williams">Williams</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Racing Bull</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/racingbull">Racing Bull</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Haas</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/haas">Haas</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Aston Martin</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/astonmartin">Aston Martin</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Kick Sauber</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/kicksauber">Kick Sauber</a>
                 </li>
                 <li><hr className="dropdown-divider" style={{ borderTop: '1px solid #d40000' }} /></li>
 
                 <li>
-                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/">Alpine</a>
+                  <a className="dropdown-item hover:bg-red-700 text-white transition" href="/team/alpine">Alpine</a>
                 </li>
 
               </ul>
