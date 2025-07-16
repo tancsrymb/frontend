@@ -6,7 +6,7 @@ export default function Card() {
       <div className='row justify-content-center'>
 
         {/* First Card */}
-        <div className='col-md-6 text-center mb-4'>
+        <div className='col-md-4 text-center mb-4'>
           <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
               <Image src="/images/Driver/Hulkenberg.png" alt="Lewis Hamilton" fill style={{ objectFit: 'cover' }} />
@@ -22,7 +22,7 @@ export default function Card() {
 
 
         {/* Second Card */}
-        <div className='col-md-6 text-center mb-4'>
+        <div className='col-md-4 text-center mb-4'>
           <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
               <Image src="/images/Driver/Verstappen.png" alt="Leclerc" fill style={{ objectFit: 'cover' }} />
@@ -37,7 +37,7 @@ export default function Card() {
         </div>
 
         {/* Third Card */}
-        <div className='col-md-6 text-center mb-4'>
+        <div className='col-md-4 text-center mb-4'>
           <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
               <Image src="/images/Driver/Norris.png" alt="Leclerc" fill style={{ objectFit: 'cover' }} />
