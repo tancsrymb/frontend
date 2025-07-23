@@ -195,16 +195,17 @@ const SearchBar = () => (
         aria-label="Search"
         style={styles.searchInput}
       />
-      <button 
-        className="btn px-3" 
-        type="submit" 
+      <button
+        className="btn px-3"
+        type="submit"
         style={styles.searchButton}
       >
-        GO
+        🔍
       </button>
     </form>
   </div>
 );
+
 
 const LoginButton = () => (
   <Link 
