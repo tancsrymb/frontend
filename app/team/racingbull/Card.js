@@ -9,10 +9,10 @@ export default function Card() {
         <div className='col-md-6 text-center mb-4'>
           <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
-              <Image src="/images/Card/Hamilton.png" alt="Lewis Hamilton" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/Driver/Lawson.png" alt="-" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="card-body">
-              <p className="card-text" style={{ fontWeight: 'bold', color: 'white' }}>Lewis Hamilton</p>
+              <p className="card-text" style={{ fontWeight: 'bold', color: 'white' }}>Liam Lawson</p>
             </div>
           </div>
         </div>
@@ -22,10 +22,10 @@ export default function Card() {
         <div className='col-md-6 text-center mb-4'>
           <div className="card mx-auto" style={{ borderRadius: '15px', border: '5px solid #d40000', overflow: 'hidden', backgroundColor: '#000000' }}>
             <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
-              <Image src="/images/Card/Leclerc.png" alt="Leclerc" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/Driver/Hadjar.png" alt="-" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="card-body">
-              <p className="card-text" style={{ fontWeight: 'bold', color: 'white' }}>Charles Leclerc</p>
+              <p className="card-text" style={{ fontWeight: 'bold', color: 'white' }}>Isack Hadjar</p>
             </div>
           </div>
         </div>
