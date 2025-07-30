@@ -30,18 +30,18 @@ export default function Home() {
                   
                   <form>
                     <div className="mb-3">
-                      <label htmlFor="email" className="form-label">อีเมล</label>
+                      <label htmlFor="username" className="form-label">Username</label>
                       <input 
-                        type="email" 
+                        type="username" 
                         className="form-control form-control-lg bg-dark text-white border-secondary" 
-                        id="email" 
+                        id="username" 
                         placeholder="กรอกอีเมลของคุณ"
                         required
                       />
                     </div>
                     
                     <div className="mb-3">
-                      <label htmlFor="password" className="form-label">รหัสผ่าน</label>
+                      <label htmlFor="password" className="form-label">Password</label>
                       <input 
                         type="password" 
                         className="form-control form-control-lg bg-dark text-white border-secondary" 
