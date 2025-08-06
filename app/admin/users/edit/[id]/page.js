@@ -28,8 +28,8 @@ export default function RegisterPage() {
       if (res.ok) {
         Swal.fire({
           icon: 'success',
-          title: 'สมัครสมาชิกสำเร็จ',
-          text: 'คุณได้สมัครสมาชิกเรียบร้อยแล้ว',
+          title: 'แก้ไขข้อมูลสำเร็จ',
+          text: 'คุณได้แก้ไขข้อมูลสำเร็จ',
           confirmButtonText: 'ตกลง',
         })
 
@@ -46,7 +46,7 @@ export default function RegisterPage() {
         Swal.fire({
           icon: 'error',
           title: 'เกิดข้อผิดพลาด',
-          text: result.message || 'ไม่สามารถสมัครสมาชิกได้',
+          text: result.message || 'ไม่สามารถแก้ไขข้อมูลได้',
         })
       }
     } catch (error) {
