@@ -9,6 +9,9 @@ export default function RegisterPage() {
   const [lastname, setLastname] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [gender, setGender] = useState('')
+  const [address, setAddress] = useState('')
+  const [birthday, setBirthday] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -20,7 +23,16 @@ export default function RegisterPage() {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
-        body: JSON.stringify({ firstname, fullname, lastname, username, password }),
+        body: JSON.stringify({
+          firstname,
+          fullname,
+          lastname,
+          username,
+          password,
+          gender,
+          address,
+          birthday,
+        }),
       })
 
       const result = await res.json()
@@ -33,15 +45,14 @@ export default function RegisterPage() {
           confirmButtonText: 'ตกลง',
         })
 
-        // ล้างค่าฟอร์ม
         setFirstname('')
         setFullname('')
         setLastname('')
         setUsername('')
         setPassword('')
-
-        // ถ้าต้องการ redirect ไปหน้า login
-        // window.location.href = '/login'
+        setGender('')
+        setAddress('')
+        setBirthday('')
       } else {
         Swal.fire({
           icon: 'error',
@@ -61,8 +72,8 @@ export default function RegisterPage() {
 
   return (
     <div className="max-w-md mx-auto mt-10 p-4 border rounded">
-      <h1 className="text-xl font-bold mb-4">สมัครสมาชิก</h1>
-      <form onSubmit={handleSubmit} className="space-y-3">
+      <h1 className="text-xl font-bold mb-4 text-white ">สมัครสมาชิก</h1>
+      <form onSubmit={handleSubmit} className="">
         <select
           value={firstname}
           onChange={(e) => setFirstname(e.target.value)}
@@ -93,6 +104,32 @@ export default function RegisterPage() {
           className="w-full border p-2 rounded"
           required
         />
+        <select
+          value={gender}
+          onChange={(e) => setGender(e.target.value)}
+          className="w-full border p-2 rounded"
+          required
+        >
+          <option value="">เลือกเพศ</option>
+          <option value="ชาย">ชาย</option>
+          <option value="หญิง">หญิง</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+        <input
+          type="text"
+          placeholder="ที่อยู่"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          className="w-full border p-2 rounded"
+          required
+        />
+        <input
+          type="date"
+          value={birthday}
+          onChange={(e) => setBirthday(e.target.value)}
+          className="w-full border p-2 rounded"
+          required
+        />
         <input
           type="text"
           placeholder="username"
@@ -111,7 +148,7 @@ export default function RegisterPage() {
         />
         <button
           type="submit"
-          className="w-full bg-green-500 text-white p-2 rounded hover:bg-blue-600"
+          className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
         >
           สมัครสมาชิก
         </button>
