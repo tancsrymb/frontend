@@ -15,6 +15,9 @@ export default function Footer() {
         <li className="nav-item">
           <a href="/contact" className="nav-link px-2 text-white">Contact</a>
         </li>
+        <li className="nav-item">
+          <a href="/admin/users" className="nav-link px-2 text-white">DB</a>
+        </li>
       </ul>
 
       <p className="text-center text-white">© 2025 Company, Inc</p>
