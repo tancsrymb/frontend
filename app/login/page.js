@@ -11,7 +11,7 @@ export default function Page() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('http://itdev.cmtc.ac.th:3000/api/auth/login', {
+    const res = await fetch('https://30ab9bb6f6b3.ngrok-free.app', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
