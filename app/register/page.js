@@ -17,7 +17,7 @@ export default function RegisterPage() {
     e.preventDefault()
 
     try {
-      const res = await fetch('http://itdev.cmtc.ac.th:3000/api/users', {
+      const res = await fetch('https://30ab9bb6f6b3.ngrok-free.app/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
