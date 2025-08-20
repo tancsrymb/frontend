@@ -18,7 +18,7 @@ export default function User() {
 
     async function getUsers() {
       try {
-        const res = await fetch('http://itdev.cmtc.ac.th:3000/api/users');
+        const res = await fetch('https://30ab9bb6f6b3.ngrok-free.app/api/users');
         if (!res.ok) {
           console.error('Failed to fetch data');
           return;
