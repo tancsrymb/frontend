@@ -9,7 +9,7 @@ export default function RegisterPage() {
   const [lastname, setLastname] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [gender, setGender] = useState('')
+  const [sex, setSex] = useState('')
   const [address, setAddress] = useState('')
   const [birthday, setBirthday] = useState('')
 
@@ -17,7 +17,7 @@ export default function RegisterPage() {
     e.preventDefault()
 
     try {
-      const res = await fetch('https://30ab9bb6f6b3.ngrok-free.app/api/users', {
+      const res = await fetch('https://backend-nu-snowy.vercel.app/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default function RegisterPage() {
           lastname,
           username,
           password,
-          gender,
+          sex,
           address,
           birthday,
         }),
@@ -50,7 +50,7 @@ export default function RegisterPage() {
         setLastname('')
         setUsername('')
         setPassword('')
-        setGender('')
+        setSex('')
         setAddress('')
         setBirthday('')
       } else {
@@ -105,8 +105,8 @@ export default function RegisterPage() {
           required
         />
         <select
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
+          value={sex}
+          onChange={(e) => setSex(e.target.value)}
           className="w-full border p-2 rounded"
           required
         >

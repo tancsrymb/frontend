@@ -1,6 +1,8 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react'; // 1. เพิ่ม Hooks
+import { useRouter } from 'next/navigation'; // 2. เพิ่ม useRouter
 
 // Constants
 const FERRARI_RED = '#d40000';
@@ -95,7 +97,8 @@ const styles = {
     fontWeight: 'bold'
   },
   
-  loginButton: {
+  // ใช้สไตล์เดียวกันทั้ง Login และ Logout
+  authButton: {
     backgroundColor: 'transparent',
     color: FERRARI_RED,
     border: `2px solid ${FERRARI_RED}`,
@@ -105,7 +108,8 @@ const styles = {
     marginLeft: '10px',
     transition: 'all 0.3s ease',
     textDecoration: 'none',
-    display: 'inline-block'
+    display: 'inline-block',
+    cursor: 'pointer'
   }
 };
 
@@ -206,12 +210,12 @@ const SearchBar = () => (
   </div>
 );
 
-
+// 3. ปรับปรุงปุ่ม Login ให้รับ props
 const LoginButton = () => (
   <Link 
     href="/login" 
     className="text-uppercase"
-    style={styles.loginButton}
+    style={styles.authButton}
     onMouseEnter={(e) => {
       e.target.style.backgroundColor = FERRARI_RED;
       e.target.style.color = WHITE;
@@ -225,6 +229,27 @@ const LoginButton = () => (
   >
     Login
   </Link>
+);
+
+// 4. เพิ่มปุ่ม Logout Component
+const LogoutButton = ({ onLogout }) => (
+  <button
+    onClick={onLogout}
+    className="text-uppercase"
+    style={styles.authButton}
+    onMouseEnter={(e) => {
+      e.target.style.backgroundColor = FERRARI_RED;
+      e.target.style.color = WHITE;
+      e.target.style.transform = 'scale(1.05)';
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.backgroundColor = 'transparent';
+      e.target.style.color = FERRARI_RED;
+      e.target.style.transform = 'scale(1)';
+    }}
+  >
+    Logout
+  </button>
 );
 
 const CustomStyles = () => (
@@ -272,6 +297,26 @@ const CustomStyles = () => (
 
 // Main Component
 export default function Navbar() {
+  // 5. เพิ่ม State และ Logic ตรวจสอบ Token
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    // เช็ค token ใน localStorage เมื่อ component โหลด
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  // 6. ฟังก์ชัน Logout
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // ลบ token
+    localStorage.removeItem('user'); // ลบข้อมูล user (ถ้ามี)
+    setIsLoggedIn(false);
+    router.push('/login'); // เด้งไปหน้า login
+  };
+
   return (
     <nav className="navbar navbar-expand-lg" style={styles.navbar}>
       <div className="container-fluid px-4">
@@ -308,7 +353,12 @@ export default function Navbar() {
 
           <div className="d-flex align-items-center">
             <SearchBar />
-            <LoginButton />
+            {/* 7. แสดงปุ่มตามสถานะการล็อกอิน */}
+            {isLoggedIn ? (
+              <LogoutButton onLogout={handleLogout} />
+            ) : (
+              <LoginButton />
+            )}
           </div>
         </div>
       </div>
